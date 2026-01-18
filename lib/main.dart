@@ -1,21 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:lesson_14/list_screen.dart';
-
-void main() {
-  runApp(const MyApp());
+void main () {
+  compute();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+void compute() async {
+  await Future.delayed(Duration(seconds: 3));
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const ListScreen (),
-    );
-  }
-}
+  print(10);
+} 
